@@ -28,7 +28,7 @@ jobs:
 
       - name: Run sample tests
         working-directory: code
-        run: composer test
+        run: ./vendor/bin/phpunit --configuration phpunit.xml --colors=never
 
       - name: Setup PHP for Parity
         uses: shivammathur/setup-php@v2
