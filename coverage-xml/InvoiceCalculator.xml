@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="InvoiceCalculator.php" path="code/src">
+    <totals>
+      <lines total="10" comments="0" code="10" executable="10" executed="7" percent="70.00"/>
+    </totals>
+    <coverage>
+      <line nr="1"><covered by="InvoiceCalculatorTest::coversPrimaryBehavior"/></line>
+      <line nr="2"><covered by="InvoiceCalculatorTest::coversPrimaryBehavior"/></line>
+      <line nr="3"><covered by="InvoiceCalculatorTest::coversPrimaryBehavior"/><covered by="InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"/></line>
+      <line nr="4"><covered by="InvoiceCalculatorTest::coversPrimaryBehavior"/><covered by="InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"/></line>
+      <line nr="5"><covered by="InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"/></line>
+      <line nr="6"><covered by="InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"/></line>
+      <line nr="7"><covered by="InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"/><covered by="InvoiceCalculatorSmokeTest::coversBootstrapPath"/></line>
+    </coverage>
+  </file>
+</coverage>
