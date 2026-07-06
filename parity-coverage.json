@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "globalPercent": 80,
+  "files": [
+    {
+      "path": "code/src/InvoiceCalculator.php",
+      "coveragePercent": 70,
+      "totalExecutableLines": 10,
+      "lines": [
+        {
+          "line": 1,
+          "coveredBy": [
+            "InvoiceCalculatorTest::coversPrimaryBehavior"
+          ]
+        },
+        {
+          "line": 2,
+          "coveredBy": [
+            "InvoiceCalculatorTest::coversPrimaryBehavior"
+          ]
+        },
+        {
+          "line": 3,
+          "coveredBy": [
+            "InvoiceCalculatorTest::coversPrimaryBehavior",
+            "InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 4,
+          "coveredBy": [
+            "InvoiceCalculatorTest::coversPrimaryBehavior",
+            "InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 5,
+          "coveredBy": [
+            "InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 6,
+          "coveredBy": [
+            "InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 7,
+          "coveredBy": [
+            "InvoiceCalculatorIntegrationTest::coversThroughPublicWorkflow",
+            "InvoiceCalculatorSmokeTest::coversBootstrapPath"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "code/src/DiscountPolicy.php",
+      "coveragePercent": 90,
+      "totalExecutableLines": 10,
+      "lines": [
+        {
+          "line": 1,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior"
+          ]
+        },
+        {
+          "line": 2,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior"
+          ]
+        },
+        {
+          "line": 3,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 4,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 5,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 6,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 7,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 8,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow"
+          ]
+        },
+        {
+          "line": 9,
+          "coveredBy": [
+            "DiscountPolicyTest::coversPrimaryBehavior",
+            "DiscountPolicyIntegrationTest::coversThroughPublicWorkflow",
+            "DiscountPolicySmokeTest::coversBootstrapPath"
+          ]
+        }
+      ]
+    }
+  ]
+}
