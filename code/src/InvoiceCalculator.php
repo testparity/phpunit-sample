@@ -10,4 +10,24 @@ final class InvoiceCalculator
     {
         return $subtotal + $tax;
     }
+
+    public function subtotalAfterCredit(int $subtotal, int $credit): int
+    {
+        return $subtotal - $credit;
+    }
+
+    public function multiplyQuantity(int $unitPrice, int $quantity): int
+    {
+        return $unitPrice * $quantity;
+    }
+
+    public function divideTotal(int $total, int $payments): int
+    {
+        return intdiv($total, $payments);
+    }
+
+    public function forecastWithBuffer(int $subtotal, int $buffer): int
+    {
+        return $subtotal + $buffer;
+    }
 }

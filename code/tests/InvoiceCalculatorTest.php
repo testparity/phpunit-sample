@@ -9,8 +9,11 @@ use PHPUnit\Framework\TestCase;
 
 final class InvoiceCalculatorTest extends TestCase
 {
-    public function test_adds_tax_to_subtotal(): void
+    public function test_covers_the_core_invoice_operations(): void
     {
-        self::assertSame(125, (new InvoiceCalculator)->totalWithTax(100, 25));
+        $calculator = new InvoiceCalculator;
+
+        self::assertSame(125, $calculator->totalWithTax(100, 25));
+        self::assertSame(90, $calculator->subtotalAfterCredit(100, 10));
     }
 }

@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   parity:
     name: Install and run Parity
@@ -30,16 +33,28 @@ jobs:
         working-directory: code
         run: ./vendor/bin/phpunit --configuration phpunit.xml --colors=never
 
-      - name: Setup PHP for Parity
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.4'
-          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, fileinfo, json
-
       - name: Install Parity
         run: |
-          composer global require testparity/parity --prefer-dist --no-progress --no-interaction
-          echo "$HOME/.composer/vendor/bin" >> "$GITHUB_PATH"
+          composer global require "testparity/parity:^1.2" --prefer-dist --no-progress --no-interaction
+          composer global config bin-dir --absolute >> "$GITHUB_PATH"
 
-      - name: Run Parity
-        run: parity check --config=parity.yaml --format=json
+      - name: Remove stale coverage evidence
+        run: |
+          rm -rf -- .parity
+          test ! -e parity-coverage.json
+
+      - name: Generate and check per-test coverage
+        run: |
+          set -o pipefail
+          parity test --config=parity.yaml --format=json --show-tests | tee parity-result.json
+
+      - name: Upload fresh Parity evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: parity-per-test-evidence
+          path: |
+            .parity/per-test
+            parity-result.json
+          if-no-files-found: warn
+          retention-days: 14
